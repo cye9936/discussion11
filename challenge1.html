@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/challenge1.css">
+  <title>JS Challenge #1</title>
+  <script>
+    function challenge1(element){
+      if(element.checked){
+        document.querySelector('#emailDiv').style.display='block';
+      }
+      else{
+        document.querySelector('#emailDiv').style.display='none';
+      }
+    }
+    function anotherFunc(){
+      console.log('am i getting triggered?')
+    }
+    document.querySelector('#subscribe2').addEventListener('click',console.log('hello'));
+  </script>
+</head>
+<body>
+    <main>
+      <h1>Challenge One</h1>
+      <form action="challenge2.html">
+        <fieldset>
+          <legend>Email subscriptions</legend>
+          <div id="check">
+            <label>
+              <input type="checkbox" name="subscribe" id="subscribe" onclick = challenge1(this)>
+              <input type="checkbox" name="subscribe" id="subscribe2">
+              Check to toggle the email field.
+            </label>
+          </div>
+
+          <div id="emailDiv">
+            <label>
+              Email Address: 
+              <input type="text" name="email" id="email">
+            </label>
+          </div>
+
+          <input type = "submit" value = "Go To Challenge 2">
+        </fieldset>
+      </form>
+  </main>
+  <script src="js/jsChallenges.js"></script>
+
+
+  </body>
+</html>
